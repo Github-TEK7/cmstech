@@ -21,6 +21,11 @@ import { EffectsModule } from '@ngrx/effects';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
+  {
+    path: '**',
+    redirectTo: '/',
+    pathMatch: 'full'
+  }
 ]
 
 @NgModule({
