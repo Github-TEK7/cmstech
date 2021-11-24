@@ -1,0 +1,34 @@
+footer {
+  // background: #525252;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    min-height: 50px;
+    padding: 10px 25px;
+    width: 100%;
+    font-size: 20px;
+  
+    .footer-wrapper {
+      align-items: center;
+  
+      .social {
+        margin-top: 15px;
+        text-align: right;
+        .nav {
+          display: flex;
+          justify-content: flex-end
+        }
+        .nav-item {
+          margin-right: 40px;
+          .pi {
+            font-size: 3rem;
+          }
+        }
+        
+      }
+    }
+  }
+  

@@ -1,0 +1,23 @@
+.elements {
+    padding: 0 180px;
+    margin-bottom: 20px;
+    &-text {
+        text-align: center;
+        margin: auto 0;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.proyect {
+    background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 30px 180px;
+    margin-top: 20px;
+    img {
+        width: 100%;
+    }   
+
+}

@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 25px;
+  
+      a {
+        color: white;
+        cursor: pointer;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,21 @@
+<div class="order-summary">
+    <h3>Resumen de Donacion</h3>
+    <div class="summary-price">
+      <span>Cantidad donada</span>
+      <span>{{ totalPrice | currency }}</span>
+    </div>
+    <div class="summary-price">
+      <span>IVA</span>
+      <span class="free">Ninguna</span>
+    </div>
+    <div class="to-checkout">
+      <div class="summary-price">
+        <span>Donacion Total</span>
+        <span>{{ totalPrice | currency }}</span>
+      </div>
+      <div class="checkout-button" *ngIf="!isCheckout">
+        <p-button label="Confirmar" (onClick)="navigateToCheckout()"></p-button>
+      </div>
+    </div>
+  </div>
+  

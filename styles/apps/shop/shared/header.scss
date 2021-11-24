@@ -1,0 +1,35 @@
+.headercontainer{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+header {
+  margin-bottom: 25px;
+
+  padding: 20px 100px;
+  
+
+  .grid {
+    margin-right: 0 !important;
+  }
+  .logo {
+    img {
+      width: 160px;
+    }
+  }
+
+  .search {
+    padding-top: 25px;
+  }
+
+  .navigation {
+    padding-top: 25px;
+  }
+
+  .tools {
+    padding-top: 38px;
+
+    .pi {
+      margin-right: 20px;
+    }
+  }
+}
+

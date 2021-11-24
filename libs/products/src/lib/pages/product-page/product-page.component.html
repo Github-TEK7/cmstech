@@ -1,0 +1,228 @@
+<div class="product-page" *ngIf="product">
+  <div class="grid">
+    <div class="col-6">
+      <ui-gallery [image]="product.image!"></ui-gallery>
+    </div>
+    <div class="col-6 product">
+      <h2 class="product-name">{{ product.name }}</h2>
+      <h2>Mision y Vision</h2>
+      <p class="product-desc">
+        {{ product.description }}
+      </p>
+      <h2>Objetivos</h2>
+      <div [innerHTML]="product.richDescription"></div>
+      <div class="p-field col inline-flex">
+        <form [formGroup]="form">
+          <label for="rating"
+            >Del 1 al 5 recomendaria este <br />
+            servicio o producto?</label
+          ><br />
+          <p-inputNumber
+            formControlName="rating"
+            mode="decimal"
+            [useGrouping]="false"
+          >
+          </p-inputNumber>
+        </form>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Calificar"
+          class="p-button-rounded ml-5 mt-5"
+          style="height: 30px"
+          (click)="addStar()"
+        ></button>
+      </div>
+      <div class="product-rating">
+        <p-rating
+          [(ngModel)]="product.rating"
+          [cancel]="false"
+          [disabled]="false"
+        ></p-rating>
+      </div>
+      <div class="product-price">
+        <p class="-mb-1" style="font-size: 20px">Meta de donaciones</p>
+        {{ product.price | currency }}
+        <p class="mt-4 -mb-1" style="font-size: 15px; color: gray">
+          Total donado a este proyecto
+        </p>
+        <span class="" style="font-size: 20px">{{
+          product.donation | currency
+        }}</span>
+      </div>
+      <div *ngIf="isDonationmax">
+        <h3>Este proyecto cumplio la meta de donaciones</h3>
+      </div>
+      <div class="product-quantity" *ngIf="!isDonationmax">
+        <div class="p-field col-12 md-3 p-p-0">
+          <label for="donation" class="mr-2">Cantidad</label>
+          <p-inputNumber
+            [(ngModel)]="quantity"
+            mode="decimal"
+            [showButtons]="true"
+            inputId="quantity"
+          >
+          </p-inputNumber>
+        </div>
+      </div>
+      <!-- <div class="product-actions" *ngIf="!isCategoryBen">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Añadir al carrito"
+          class="p-button-rounded"
+          (click)="addProductToCart()"
+        ></button>
+      </div> -->
+      <button
+        *ngIf="!isDonationmax"
+        pButton
+        pRipple
+        type="button"
+        label="Donar"
+        class="p-button-rounded mr-2 mt-3"
+        (click)="addProductToCart()"
+      ></button>
+    </div>
+  </div>
+
+  <div class="grid product-rich-desc" *ngIf="product.namep1 && (product.category?.id=='618bc902ba34dbf7123d1ee0' || product.category?.id=='618bc920ba34dbf7123d1ee6')">
+    <div class="col-12">
+      <div class="categories-banner">
+        <h3 style="color: black; font-size: 30px">Productos</h3>
+        <div class="grid">
+          <div class="col-4" *ngIf="product.namep1">
+            <div class="category">
+              <!-- [ngStyle]="{ backgroundColor: category.color }" -->
+              <div class="grid mt-3" >
+                <div class="col-5" >
+                  <div class="category-icon ">
+                    <i class="pi pi-{{ product.iconp1 }}"></i>
+                  </div>
+                </div>
+                <div class="offset-1 col-6 text-center" >
+                  <div class="category-name">{{ product.namep1 }}</div>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="col-12">
+                  <div class="category-desc"><p>{{ product.descriptionp1 }}</p></div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+          <div class="col-4" *ngIf="product.namep2">
+            <div class="category">
+              <!-- [ngStyle]="{ backgroundColor: category.color }" -->
+              <div class="grid mt-3" >
+                <div class="col-5">
+                  <div class="category-icon">
+                    <i class="pi pi-{{ product.iconp2 }}"></i>
+                  </div>
+                </div>
+                <div class="offset-1 col-6 text-center" >
+                  <div class="category-name">{{ product.namep2 }}</div>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="col-12">
+                  <div class="category-desc"><p>{{ product.descriptionp2 }}</p></div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+          <div class="col-4" *ngIf="product.namep3">
+            <div class="category">
+              <!-- [ngStyle]="{ backgroundColor: category.color }" -->
+              <div class="grid mt-3" >
+                <div class="col-5">
+                  <div class="category-icon">
+                    <i class="pi pi-{{ product.iconp3 }}"></i>
+                  </div>
+                </div>
+                <div class="offset-1 col-6 text-center" >
+                  <div class="category-name">{{ product.namep3 }}</div>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="col-12">
+                  <div class="category-desc"><p>{{ product.descriptionp3 }}</p></div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-4"></div>
+  </div>
+
+  <div class="grid product-rich-desc" *ngIf="product.namep1 && product.category?.id=='618bc8d0ba34dbf7123d1edd'">
+    <div class="col-12">
+      <div class="categories-banner">
+        <h3 style="color: black; font-size: 30px">Cronograma</h3>
+        <div class="p-fluid grid " style="padding: 0;">
+          <div class="col-12" *ngIf="product.namep1">
+              <!-- [ngStyle]="{ backgroundColor: category.color }" -->
+                <div class="grid" style="padding: 20px; background-color: ivory;  width: 100%;">
+                  <div class="col-2" >
+                    <div class="category-icon ">
+                      <i class="pi pi-{{ product.iconp1 }}"></i>
+                    </div>
+                  </div>
+                  <div class="col-4 text-center" >
+                    <div class="category-name">{{ product.namep1 }}</div>
+                  </div>
+                  <div class="col-6">
+                    <div class="category-desc"><p>{{ product.descriptionp1 }}</p></div>
+                  </div>
+                </div>
+          </div>
+          <div class="col-12" *ngIf="product.namep2">
+              <!-- [ngStyle]="{ backgroundColor: category.color }" -->
+                <div class="grid" style="padding: 20px;  width: 100%;">
+                  <div class="col-2" >
+                    <div class="category-icon ">
+                      <i class="pi pi-{{ product.iconp2 }}"></i>
+                    </div>
+                  </div>
+                  <div class="col-4 text-center" >
+                    <div class="category-name">{{ product.namep2 }}</div>
+                  </div>
+                  <div class="col-6">
+                    <div class="category-desc"><p>{{ product.descriptionp2 }}</p></div>
+                  </div>
+                </div>
+          </div>
+          <div class="col-12" *ngIf="product.namep3">
+              <!-- [ngStyle]="{ backgroundColor: category.color }" -->
+                <div class="grid" style="padding: 20px; background-color: ivory; width: 100%;">
+                  <div class="col-2" >
+                    <div class="category-icon ">
+                      <i class="pi pi-{{ product.iconp3 }}"></i>
+                    </div>
+                  </div>
+                  <div class="col-4 text-center" >
+                    <div class="category-name">{{ product.namep3 }}</div>
+                  </div>
+                  <div class="col-6">
+                    <div class="category-desc"><p>{{ product.descriptionp3 }}</p></div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-4"></div>
+  </div>
+</div>

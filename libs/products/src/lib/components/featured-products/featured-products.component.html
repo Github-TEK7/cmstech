@@ -1,0 +1,9 @@
+<div class="featured-products mt-5 text-center">
+    <h3 style="margin-bottom: 20px; color: black; font-size: 30px;">PRODUCTOS</h3>
+    <div class="grid">
+        <div class="col-4" *ngFor="let product of featuredProducts">
+            <products-product-item [product]="product"></products-product-item>
+      </div>
+    </div>
+  </div>
+  

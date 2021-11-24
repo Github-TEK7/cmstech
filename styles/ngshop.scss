@@ -1,0 +1,78 @@
+//Base
+@import '~normalize.css/normalize.css';
+@import './base/colors.scss';
+@import './base/fonts.scss';
+@import './base/mixins.scss';
+@import './base/configuration.scss';
+
+//framework
+
+//libraries
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/saga-blue/theme.css';
+@import '~primeng/resources/primeng.min.css';
+@import '~primeflex/primeflex.css';
+@import '~animate.css/animate.css';
+
+@import './base/configuration.scss';
+
+//Pages
+@import './apps/shop/pages/home-page.scss';
+@import './apps/shop/pages/products-list-page.scss';
+
+//Shared
+@import './apps/shop/shared/footer.scss';
+@import './apps/shop/shared/header.scss';
+@import './apps/shop/shared/nav.scss';
+
+//Libs
+@import './libs/users/users.scss';
+@import './libs/orders/orders.scss';
+@import './libs/products/products.scss';
+@import './libs/products/product-search.scss';
+@import './libs/ui/ui.scss';
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--surface-100);
+  padding: 0;
+}
+
+.containerbanner {
+  position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.contenedorheader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.containerelemts {
+  padding: 0;
+}
+
+.containerfeatured {
+  padding: 20px 180px;
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+.containerproducts {
+  padding: 0 180px;
+}
+
