@@ -177,8 +177,7 @@
               "sourceMap": true,
               "namedChunks": true
             }
-          },
-          "defaultConfiguration": "production"
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -253,22 +252,7 @@
       "sourceRoot": "libs/orders/src",
       "prefix": "orders",
       "architect": {
-        "build": {
-          "builder": "@nrwl/angular:ng-packagr-lite",
-          "outputs": ["dist/libs/orders"],
-          "options": {
-            "project": "libs/orders/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/orders/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/orders/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
+        
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/orders"],
@@ -344,22 +328,8 @@
       "sourceRoot": "libs/users/src",
       "prefix": "users",
       "architect": {
-        "build": {
-          "builder": "@nrwl/angular:ng-packagr-lite",
-          "outputs": ["dist/libs/users"],
-          "options": {
-            "project": "libs/users/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/users/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "libs/users/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
+      
+         
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/users"],
