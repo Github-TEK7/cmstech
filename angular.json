@@ -16,7 +16,7 @@
             "polyfills": "apps/ngshop/src/polyfills.ts",
             "tsConfig": "apps/ngshop/tsconfig.app.json",
             "assets": ["apps/ngshop/src/favicon.ico", "apps/ngshop/src/assets"],
-            "styles": ["apps/ngshop/src/styles.scss"],
+            "styles": ["apps/ngshop/src/styles.scss", "./node_modules/aos/dist/aos.css"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,

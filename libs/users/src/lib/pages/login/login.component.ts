@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginFormGroup!: FormGroup;
   isSubmitted = false;
   authError = false;
-  authMessage = 'Email or Password are wrong';
+  authMessage = 'Correo o contraseña invalido';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       (error: HttpErrorResponse) => {
         this.authError = true;
         if (error.status !== 400) {
-          this.authMessage = 'Error in the Server, please try again later!';
+          this.authMessage = 'Error en servidor, por favor intentelo dentro de unos minutos!';
         }
       }
     );

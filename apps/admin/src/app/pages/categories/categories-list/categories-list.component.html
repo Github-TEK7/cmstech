@@ -36,8 +36,9 @@
                   [ngStyle]="{ color: category.color }"
                 ></i></td>
                 <td>
-                  <p-button (click)="updateCategory(category.id)" styleClass="button mr-3" icon="pi pi-pencil" ></p-button>
-                  <p-button (click)="deleteCategory(category.id)" styleClass="p-button-danger" icon="pi pi-trash" ></p-button>
+                  <p-button (click)="deleteCategory(category.id)" styleClass="p-button-danger mr-3" icon="pi pi-trash" ></p-button>
+                  <p-button (click)="updateCategory(category.id)" styleClass="button " icon="pi pi-pencil" ></p-button>
+                  
                 </td>
               </tr>
             </ng-template>

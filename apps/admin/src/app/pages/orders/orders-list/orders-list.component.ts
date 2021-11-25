@@ -65,8 +65,8 @@ export class OrdersListComponent implements OnInit, OnDestroy {
 
   deleteOrder(orderId: string) {
     this.confirmationService.confirm({
-      message: 'Do you want to Delete this Order?',
-      header: 'Delete Order',
+      message: 'Desea eliminar esta donacion?',
+      header: 'Eliminar donacion',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.ordersService
@@ -77,15 +77,15 @@ export class OrdersListComponent implements OnInit, OnDestroy {
               this._getOrders();
               this.messageService.add({
                 severity: 'success',
-                summary: 'Success',
-                detail: 'Order is deleted!'
+                summary: 'Exitoso',
+                detail: 'Donacion eliminada!'
               });
             },
             () => {
               this.messageService.add({
                 severity: 'error',
                 summary: 'Error',
-                detail: 'Order is not deleted!'
+                detail: 'Donacion no eliminada!'
               });
             }
           );

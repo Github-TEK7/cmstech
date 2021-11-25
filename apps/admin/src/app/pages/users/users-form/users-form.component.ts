@@ -42,9 +42,6 @@ export class UsersFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
       isAdmin: [false],
-      street: [''],
-      apartment: [''],
-      zip: [''],
       city: [''],
       country: ['']
     });
@@ -120,9 +117,6 @@ export class UsersFormComponent implements OnInit {
           this.userForm.email.setValue(user.email);
           this.userForm.phone.setValue(user.phone);
           this.userForm.isAdmin.setValue(user.isAdmin);
-          this.userForm.street.setValue(user.street);
-          this.userForm.apartment.setValue(user.apartment);
-          this.userForm.zip.setValue(user.zip);
           this.userForm.city.setValue(user.city);
           this.userForm.country.setValue(user.country);
 
@@ -142,11 +136,9 @@ export class UsersFormComponent implements OnInit {
       id: this.currentUserId,
       name: this.userForm.name.value,
       email: this.userForm.email.value,
+      password: this.userForm.password.value,
       phone: this.userForm.phone.value,
       isAdmin: this.userForm.isAdmin.value,
-      street: this.userForm.street.value,
-      apartment: this.userForm.apartment.value,
-      zip: this.userForm.zip.value,
       city: this.userForm.city.value,
       country: this.userForm.country.value
     };

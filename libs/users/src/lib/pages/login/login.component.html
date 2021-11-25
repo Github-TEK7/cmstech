@@ -5,7 +5,7 @@
           <img style="width: 100%;" src="assets/cms.jpg" />
         </div>
         <div class="col-6 p-p-5">
-          <h3 class="mb-5">Bienvenido a 'Nombre Pendiente'!</h3>
+          <h3 class="mb-5">Bienvenido a CMS-TECH</h3>
           <h2 style="text-align: center;" >Iniciar Sesión</h2>
           <form [formGroup]="loginFormGroup">
             <div class="grid mt-6 p-5">
@@ -15,8 +15,8 @@
                   <input type="text" formControlName="email" pInputText placeholder="Email" />
                 </div>
                 <small *ngIf="loginForm.email.invalid && isSubmitted" class="p-error"
-                  ><span *ngIf="loginForm.email.errors!.required">email is required</span>
-                  <span *ngIf="loginForm.email.errors!.email">email is invalid</span></small
+                  ><span *ngIf="loginForm.email.errors!.required">correo es requerido</span>
+                  <span *ngIf="loginForm.email.errors!.email">correo is invalid</span></small
                 >
               </div>
               <div class="col-12">
@@ -30,7 +30,7 @@
                   />
                 </div>
                 <small *ngIf="loginForm.password.invalid && isSubmitted" class="p-error"
-                  >Password is required
+                  >Contraseña es requerida
                 </small>
               </div>
               <div class="col-12">
