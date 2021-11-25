@@ -67,8 +67,8 @@ export class UsersFormComponent implements OnInit {
       (user: User) => {
         this.messageService.add({
           severity: 'success',
-          summary: 'Success',
-          detail: `User ${user.name} is created!`
+          summary: 'Exitoso',
+          detail: `Usuario ${user.name} fue creado!`
         });
         timer(2000)
           .toPromise()
@@ -80,7 +80,7 @@ export class UsersFormComponent implements OnInit {
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
-          detail: 'User is not created!'
+          detail: 'Usuario no fue creado  !'
         });
       }
     );
@@ -91,8 +91,8 @@ export class UsersFormComponent implements OnInit {
       () => {
         this.messageService.add({
           severity: 'success',
-          summary: 'Success',
-          detail: 'User is updated!'
+          summary: 'Exitoso',
+          detail: 'Usuario fue actualizado!'
         });
         timer(2000)
           .toPromise()
@@ -104,7 +104,7 @@ export class UsersFormComponent implements OnInit {
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
-          detail: 'User is not updated!'
+          detail: 'Ususario no fue actualizado!'
         });
       }
     );

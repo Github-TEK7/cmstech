@@ -63,23 +63,23 @@ export class CategoriesFormComponent implements OnInit {
 
   private _addCategory(category: Category) {
     this.categoriesService.createCategory(category).subscribe((category: Category) => {
-      this.messageService.add({ severity: 'success', summary: 'Success', detail: `Category ${category.name} is Created` });
+      this.messageService.add({ severity: 'success', summary: 'Exitoso', detail: `Categoria ${category.name} fue creada` });
       timer(1000).toPromise().then(() => {
         this.location.back();
       })
     }, () => {
-      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Category is not Created' });
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Categoria no fue creada' });
     });
   }
 
   private _updateCategory(category: Category) {
     this.categoriesService.updateCategory(category).subscribe(() => {
-      this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Category is Updated' });
+      this.messageService.add({ severity: 'success', summary: 'Exitoso', detail: 'Categoria fue actualizada' });
       timer(500).toPromise().then(() => {
         this.location.back();
       })
     }, () => {
-      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Category is not Updated' });
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Categoria no fue actualizada' });
     });
   }
 

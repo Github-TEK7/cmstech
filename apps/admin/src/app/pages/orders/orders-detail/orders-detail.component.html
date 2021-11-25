@@ -4,12 +4,12 @@
     <p-fieldset legend="Detalles de donacion" styleClass="p-mb-4" [toggleable]="true">
       <div class="grid">
         <div class="col-4">
-          <h5>Venta Id</h5>
+          <h5>Donacion Id</h5>
           <p>{{ order.id }}</p>
         </div>
 
         <div class="col-4">
-          <h5>Fecha de Venta</h5>
+          <h5>Fecha de Donacion</h5>
           <p>{{ order.dateOrdered | date: 'short' }}</p>
         </div>
 
@@ -57,7 +57,7 @@
     <p-fieldset legend="Informacion del donante" styleClass="p-mb-4" [toggleable]="true">
       <div class="grid">
         <div class="col-4">
-          <h5>Origen de la Venta</h5>
+          <h5>Origen de la Donacion</h5>
           <p>
             {{ order.zip }} {{ order.city }}, 
             {{ order.country }}

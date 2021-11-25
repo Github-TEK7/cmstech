@@ -32,8 +32,8 @@ export class UsersListComponent implements OnInit, OnDestroy {
 
   deleteUser(userId: string) {
     this.confirmationService.confirm({
-      message: 'Do you want to Delete this User?',
-      header: 'Delete User',
+      message: 'Desea eliminar este usuario?',
+      header: 'Eliminar Producto',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.usersService
@@ -44,15 +44,15 @@ export class UsersListComponent implements OnInit, OnDestroy {
               this._getUsers();
               this.messageService.add({
                 severity: 'success',
-                summary: 'Success',
-                detail: 'User is deleted!'
+                summary: 'Exitoso',
+                detail: 'Usuario fue eliminado!'
               });
             },
             () => {
               this.messageService.add({
                 severity: 'error',
                 summary: 'Error',
-                detail: 'User is not deleted!'
+                detail: 'Usuario fue eliminado'
               });
             }
           );
